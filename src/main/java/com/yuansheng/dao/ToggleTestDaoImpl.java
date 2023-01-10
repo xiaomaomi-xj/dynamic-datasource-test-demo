@@ -29,7 +29,7 @@ public class ToggleTestDaoImpl implements ToggleTestDao{
     @Override
     public int removeContextDao(String id) {
         return MyAloneHandlerReadWrite.write(()->{
-            int update = jdbcTemplate.update("delete  from  user  where id = ?",2);
+            int update = jdbcTemplate.update("delete  from  user  where id = ?", 2);
             int i=1/0;
             return update;
         },Integer.class);
