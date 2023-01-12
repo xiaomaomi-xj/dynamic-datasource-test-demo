@@ -21,12 +21,12 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-    <dependencies>
+     <dependencies>
 
         <dependency>
             <groupId>io.github.xiaomaomi-xj</groupId>
             <artifactId>zyh-dynamic-datasource</artifactId>
-            <version>1.0.3</version>
+            <version>1.0.5</version>
         </dependency>
 
         <dependency>
@@ -49,6 +49,13 @@
             <artifactId>springfox-boot-starter</artifactId>
             <version>3.0.0</version>
         </dependency>
+
+
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba</groupId>-->
+<!--            <artifactId>druid</artifactId>-->
+<!--            <version>1.2.15</version>-->
+<!--        </dependency>-->
 
 
     </dependencies>

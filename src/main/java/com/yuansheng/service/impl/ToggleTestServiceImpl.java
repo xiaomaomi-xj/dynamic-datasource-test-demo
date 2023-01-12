@@ -105,4 +105,24 @@ public class ToggleTestServiceImpl {
     }
 
 
+    /**
+     * 1.0.4: 指定某一个从库的使用
+     *
+     * @return
+     */
+    @ZyhDataSourceRead("slave1")
+    public List<Map<String, Object>> getAppointContext() {
+        return toggleTestDao.getContext();
+    }
+
+    /**
+     * 1.0.4: 还是单独读写优先级高，他会覆盖掉注解上的从库
+     *
+     * @return
+     */
+    @ZyhDataSourceRead("slave1")
+    public List getAppointMethodContext() {
+        return MyAloneHandlerReadWrite.read(toggleTestDao::getContext,List.class,"slave2");
+    }
+
 }

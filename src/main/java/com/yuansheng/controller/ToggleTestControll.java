@@ -73,4 +73,23 @@ public class ToggleTestControll {
     public void updateAndGet(String id){
         toggleTestServiceImpl.updateAndGet(id);
     }
+
+
+    /**
+     * 1.0.4
+     */
+    @GetMapping("/appoint-annotation-get-context")
+    @ApiOperation(value = "从指定从库上获取内容，读注解的方式")
+    public List<Map<String, Object>> appointAnnotationGetContext(){
+        return toggleTestServiceImpl.getAppointContext();
+    }
+
+    /**
+     * 1.0.4
+     */
+    @GetMapping("/appoint-methid-get-context")
+    @ApiOperation(value = "从指定从库上获取内容，读方法的方式")
+    public List appointMethodGetContext(){
+        return toggleTestServiceImpl.getAppointMethodContext();
+    }
 }
